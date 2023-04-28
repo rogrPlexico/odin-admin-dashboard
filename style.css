@@ -1,7 +1,5 @@
 * {
     box-sizing: border-box;
-    /* border: solid black 1px; */
-    border: black solid 1px;
 }
 
 body {
@@ -17,7 +15,7 @@ ul {
 .grid-container {
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 3.5fr;
 }
 
 /* sidebar */
@@ -25,11 +23,73 @@ ul {
 .sidebar {
     display: grid;
     grid-template-rows: repeat(auto-fill, minmax(6vh, 1fr));
+    background-color: rgb(82, 163, 196);
+    min-height: 250px;
+}
+
+.side-item {
+    min-height: 6vh ;
 }
 
 .logo {
     grid-row: 1 / 3;
+    align-self: center;
 }
+
+.sidebar > * {    /* sidebar icon font-size */
+   font-size: 3rem; 
+   filter: invert(100%);
+}
+
+.side-item > * {   /* sidebar font size, does not affect sidebar icons */
+    font-size: 1.5rem;
+    align-self: center;
+    position: relative;
+    top: -0.25rem;
+}
+
+.sidebar .logo {
+    font-size: 4rem;
+}
+
+.logo > span {
+    font-size: 3rem;
+}
+
+.logo {
+    list-style: square url('images/dashboard.svg');
+}
+.home {
+    list-style: square url('images/home.svg');
+}
+.profile {
+    list-style: square url('images/profile.svg');
+}
+.messages {
+    list-style: square url('images/messages.svg');
+}
+.history {
+    list-style: square url('images/history.svg');
+}
+.tasks {
+    list-style: square url('images/tasks.svg');
+}
+.communities {
+    list-style: square url('images/community.svg');
+}
+.settings {
+    list-style: square url('images/settings.svg');
+}
+.support {
+    list-style: square url('images/support.svg');
+}
+.privacy {
+    list-style: square url('images/privacy.svg');
+}
+.empty {
+    list-style: none;
+}
+   
 
 /* main */
 
@@ -38,10 +98,59 @@ main {
     grid-template-rows: 1fr 5fr;
 }
 
+/* main header */
+
 header {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
+    background-color: rgb(240, 202, 131);
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 10px 20px;
+    
 }
+
+.search-form {
+    display: grid;
+    grid-template-columns: 1fr 15fr;
+}
+
+.searchbar {
+    margin-right: 12vw;
+    border-radius:  10px;
+} 
+
+.greeting {
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    align-items: center;
+}
+
+.duck-icon {
+    filter: hue-rotate(70deg) invert();
+    margin-left: 1rem;
+}
+
+.hi-name {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-content: center;
+}
+
+.hi {
+    margin-bottom: 2px;
+    font-weight: bold;
+    font-size: .9rem;
+}
+
+.name {
+    margin-top: 2px;
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+/* main center */
 
 .center {
     grid-row: 2 / 3;
@@ -73,4 +182,17 @@ header {
 .component-right {
     display: grid;
     grid-template-rows: repeat(auto-fit, minmax(3vh, 1fr));
+}
+
+.card {
+    box-shadow: 
+      blue 0px 0px 0px 2px inset,
+      rgb(255, 255, 255) 3px -3px 0px -3px, rgb(31, 193, 27) 3px -3px,
+      rgb(255, 255, 255) 6px -6px 0px -3px, rgb(255, 217, 19) 6px -6px,
+      rgb(255, 255, 255) 9px -9px 0px -3px, rgb(255, 156, 85) 9px -9px,
+      rgb(255, 255, 255) 12px -12px 0px -3px, rgb(255, 85, 85) 12px -12px;
+}
+
+h2 { 
+    font-size: 20px;
 }

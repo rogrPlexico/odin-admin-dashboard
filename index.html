@@ -9,24 +9,57 @@
 
 <body>
 
+    <!--
+    c1 sidebar(list)
+        autorows
+    c2 main
+        r1 header
+            r1c1 search
+            r1c2 profile
+            r2c1 greeting
+            r2c2 buttons
+                c1 
+                c2
+                c3
+        r2 center
+            c1 centerleft
+                r1 center-left-header
+                r2 center-left-panel
+                    autofit (2c3r) cards
+            c2 centerright
+                rodd
+                reven
+                    autorows  -->
+
+
 <div class="grid-container">
     <ul class="sidebar">
-        <li class="logo">img - dash</li>
-        <li class="side-item home">home</li>
-        <li class="side-item profile">prof</li>
-        <li class="side-item messages">mes</li>
-        <li class="side-item history">history</li>
-        <li class="side-item tasks">tasks</li>
-        <li class="side-item communities">communities</li>
-        <li class="first-secondary side-item settings">settings</li>
-        <li class="side-item support">support</li>
-        <li class="side-item privacy">privacy</li>
+        <li class="logo side-item"><span>dashboard</span></li>
+        <li class="side-item home"><span>home</span></li>
+        <li class="side-item profile"><span>prof</span></li>
+        <li class="side-item messages"><span>mes</span></li>
+        <li class="side-item history"><span>history</span></li>
+        <li class="side-item tasks"><span>tasks</span></li>
+        <li class="side-item communities"><span>communities</span></li>
+        <li class="side-item empty"></li>
+        <li class="first-secondary side-item settings"><span>settings</span></li>
+        <li class="side-item support"><span>support</span></li>
+        <li class="side-item privacy"><span>privacy</span></li>
     </ul>
     <main>
         <header>
-            <form><input type="search" /></form>
-            <div>profile</div>
-            <div>greeting</div>
+            <form class="search-form">
+                <img src="images/search.svg" style="width:20px; height:20px;" />
+                <input class="searchbar" type="search" />
+            </form>
+            <div class="profile">profile</div>
+            <div class="greeting">
+                <img class="duck-icon" src="images/duck.svg" style="width:40px; height:30px;" />
+                <div class="hi-name">
+                    <p class="hi">Hi there,</p>
+                    <p class="name">Duckman9000 (@QuackersMcGoo)</p>
+                </div>
+            </div>
             <div>
                 <button>New</button>
                 <button>Upload</button>
@@ -66,80 +99,13 @@
 
 </div>
 
-<!--
-    c1 sidebar(list)
-        autorows
-    c2 main
-        r1 header
-            r1c1 search
-            r1c2 profile
-            r2c1 greeting
-            r2c2 buttons
-                c1 
-                c2
-                c3
-        r2 center
-            c1 centerleft
-                r1 center-left-header
-                r2 center-left-panel
-                    autofit (2c3r) cards
-            c2 centerright
-                rodd
-                reven
-                    autorows 
-
-
-
-
-    <div class="sidebar">
-        <h1 class="dashlogo">img</h1>
-        <ul class="sidelist">
-            <li class="sidelist-item home">Home</li>
-            <li class="sidelist-item profile">Profile</li>
-            <li class="sidelist-item message">Messages</li>
-            <li class="sidelist-item history">History</li>
-            <li class="sidelist-item tasks">Tasks</li>
-            <li class="sidelist-item communities">Communities</li>
-            <li class="first-secondary-item sidelist-item settings">Setting</li>
-            <li class="sidelist-item support">Support</li>
-            <li class="sidelist-item privacy">Privacy</li>
-        </ul>
-    </div>
-    <main>
-        <header>
-            <form>
-                <input type="search" />
-            </form>
-            <div>profile</div>
-            <div>greeting</div>
-            <div>
-                <button>NewButton</button>
-                <button>UploaButton</button>
-                <button>ShareButton</button>
-            </div>
-        </header>
-        <div class="center">
-            <h2>Your Projects</h2>
-            <div class="center-left">
-                <div class="card">card1</div>
-                <div class="card">card2</div>
-                <div class="card">card3</div>
-                <div class="card">card4</div>
-                <div class="card">card5</div>
-                <div class="card">card6</div>
-            </div>
-            <div class="center-right">
-                <div>announcements</div>
-                <div>trending</div>
-            </div>
-        </div>
-    </main>
-</div>
-
-
--->
-
-
-
 </body>
 </html>
+
+
+
+
+
+
+
+
