@@ -96,6 +96,7 @@ ul {
 main {
     display: grid;
     grid-template-rows: 1fr 5fr;
+    height: 100vh;
 }
 
 /* main header */
@@ -107,8 +108,7 @@ header {
     align-items: center;
     justify-content: center;
     padding: 10px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 10px 20px;
-    
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 10px 20px;   
 }
 
 .search-form {
@@ -123,31 +123,51 @@ header {
 
 .greeting {
     display: grid;
-    grid-template-columns: 1fr 7fr;
-    align-items: center;
+    grid-template-columns: 1fr 8fr;
+    align-items: end;
 }
 
 .duck-icon {
     filter: hue-rotate(70deg) invert();
-    margin-left: 1rem;
+    margin-left: 0.5rem;
 }
 
 .hi-name {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    align-content: center;
+    align-content: end;
 }
 
 .hi {
-    margin-bottom: 2px;
+    margin: 0px;
     font-weight: bold;
     font-size: .9rem;
+    align-self: end;
 }
 
 .name {
-    margin-top: 2px;
+    margin: 0px;
     font-size: 1.15rem;
     font-weight: bold;
+    align-self: end;
+}
+
+button {
+    background-color: rgb(125, 18, 255);
+    border: 1px solid #E5E7EB;
+    color: rgb(243, 243, 243);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1rem;
+    padding: .75rem 1.65rem;
+    max-width: 460px;
+    cursor: pointer;
+    transform: rotate(-2deg);
+    outline: 1px rgb(221, 219, 219) solid;
+}
+    
+.center-left-header {
+    padding-left: 1rem;
 }
 
 /* main center */
